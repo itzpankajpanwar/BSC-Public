@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Bawari Samaj Connect</title>
+  
+  <!-- Premium Tab Favicon (Using the actual logo) -->
+  <link rel="icon" href="assets/community-logo.png" type="image/png">
+  <link rel="shortcut icon" href="assets/community-logo.png" type="image/png">
+  
+  <!-- Premium SEO & OpenGraph Meta Tags -->
+  <meta name="description" content="Official upcoming digital community hub for Bawari Samaj Connect. Bridging heritage, unity, career mentorship, secure directories, and sports scoring.">
+  <meta name="keywords" content="Bawari Samaj, बावरी समाज, Bawari Connect, Community Registry, Nari Shakti, Gemini AI Counselor, Rajasthan, Gotra Registry">
+  <meta property="og:title" content="Bawari Samaj Connect - Coming Soon">
+  <meta property="og:description" content="Connecting our community like never before. Secure registry, career tools, emergency blood desk, and cultural preservation.">
+  <meta property="og:image" content="assets/community-logo.png">
+  <meta property="og:type" content="website">
+  
+  <!-- Premium Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Deep Royal Navy & Gold Crest Theme (Ultra Professional & Luxurious) */
+      --bg: #090e1a; 
+      --bg-darker: #04060c;
+      --panel: rgba(15, 23, 42, 0.58);
+      --panel-hover: rgba(30, 41, 59, 0.75);
+      --line: rgba(255, 255, 255, 0.04);
+      --line-bright: rgba(255, 255, 255, 0.08);
+      --ink: #f8fafc;
+      --muted: #94a3b8;
+      
+      --accent: #3b82f6; /* Trustworthy Royal Blue */
+      --accent-rgb: 59, 130, 246;
+      --gold: #e2b74c; /* Prestigious Gold Crest */
+      --gold-rgb: 226, 183, 76;
+      
+      --blue: #0ea5e9;
+      --purple: #818cf8;
+      --rose: #f43f5e;
+      --accent-gradient: linear-gradient(135deg, #1e3b8b 0%, #3b82f6 50%, #e2b74c 100%);
+      --gold-gradient: linear-gradient(135deg, #a16207 0%, #e2b74c 50%, #fde047 100%);
+      --text-gradient: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+      --royal-gradient: linear-gradient(135deg, #93c5fd 0%, #3b82f6 50%, #e2b74c 100%);
+      --glass-blur: blur(28px);
+      --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Animated Particles Canvas */
+    #particles-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Ambient Lighting/Glow Orbs */
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(140px);
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.4;
+      mix-blend-mode: screen;
+    }
+    .orb-1 {
+      top: -15%;
+      left: 10%;
+      width: 45vw;
+      height: 45vw;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+      animation: floatOrb1 15s infinite alternate ease-in-out;
+    }
+    .orb-2 {
+      bottom: 5%;
+      right: 5%;
+      width: 40vw;
+      height: 40vw;
+      background: radial-gradient(circle, rgba(226, 183, 76, 0.08) 0%, rgba(0, 0, 0, 0) 75%);
+      animation: floatOrb2 20s infinite alternate-reverse ease-in-out 3s;
+    }
+    @keyframes floatOrb1 {
+      0% { transform: translateY(0) scale(1) rotate(0deg); }
+      100% { transform: translateY(-40px) scale(1.08) rotate(30deg); }
+    }
+    @keyframes floatOrb2 {
+      0% { transform: translateY(0) scale(1) rotate(0deg); }
+      100% { transform: translateY(-60px) scale(1.1) rotate(-30deg); }
+    }
+
+    /* Technical 3D perspective grid overlay */
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.22;
+      mask-image: radial-gradient(circle at 50% 40%, black 30%, transparent 85%);
+    }
+
+    header {
+      padding: 30px clamp(24px, 6vw, 100px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+      background: rgba(4, 6, 12, 0.25);
+      backdrop-filter: blur(8px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-logo-container {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-logo-container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transform: translateX(-100%);
+      animation: logoShimmer 3.5s infinite;
+    }
+
+    @keyframes logoShimmer {
+      100% { transform: translateX(100%); }
+    }
+
+    .brand-logo-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #ffffff;
+    }
+
+    .brand-text h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+      background: var(--text-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-text span {
+      font-size: 11.5px;
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: block;
+      margin-top: 3px;
+    }
+
+    /* Premium Language Slider Switch */
+    .switch-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      padding: 4px;
+      backdrop-filter: blur(10px);
+    }
+
+    .switch-bg-pill {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      height: calc(100% - 8px);
+      width: calc(50% - 4px);
+      background: var(--accent-gradient);
+      border-radius: 99px;
+      z-index: 1;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+    }
+
+    .switch-btn {
+      position: relative;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--muted);
+      padding: 8px 22px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      border-radius: 99px;
+      z-index: 2;
+      transition: color 0.3s;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .switch-btn.active {
+      color: white;
+    }
+
+    /* Main Grid Section */
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      max-width: 1340px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 40px clamp(24px, 6vw, 100px) 100px;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .left-hero {
+      text-align: left;
+    }
+
+    .right-showcase {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Top Motto - Premium styling */
+    .motto-top {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .motto-top::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 8px var(--gold);
+    }
+
+    .title-main {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(38px, 4.4vw, 60px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      margin-bottom: 24px;
+      color: #ffffff;
+    }
+
+    .title-gradient {
+      background: var(--royal-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 40px rgba(59, 130, 246, 0.1);
+    }
+
+    .desc {
+      font-size: clamp(16px, 1.8vw, 18px);
+      color: #94a3b8;
+      margin-bottom: 28px;
+      line-height: 1.68;
+      max-width: 600px;
+    }
+
+    /* Bottom Motto */
+    .motto-bottom {
+      font-size: clamp(15px, 1.8vw, 17px);
+      font-weight: 500;
+      font-style: italic;
+      color: #cbd5e1;
+      border-left: 3px solid var(--gold);
+      padding-left: 18px;
+      margin-bottom: 38px;
+      max-width: 580px;
+      line-height: 1.55;
+      background: linear-gradient(90deg, rgba(226, 183, 76, 0.04) 0%, transparent 100%);
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+
+    /* Status capsule with pulse indicator */
+    .status-capsule {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(226, 183, 76, 0.05) 100%);
+      border: 1px solid rgba(226, 183, 76, 0.22);
+      padding: 10px 22px;
+      border-radius: 16px;
+      gap: 12px;
+      margin-bottom: 38px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 10px var(--gold);
+      position: relative;
+    }
+
+    .status-dot::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      animation: pulseDot 2s infinite ease-out;
+    }
+
+    @keyframes pulseDot {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+
+    .status-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    /* Subscription form */
+    .form-container {
+      max-width: 490px;
+      margin-bottom: 20px;
+    }
+
+    .signup-form {
+      display: flex;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 5px;
+      backdrop-filter: var(--glass-blur);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255,255,255,0.02);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .signup-form:focus-within {
+      border-color: rgba(59, 130, 246, 0.4);
+      box-shadow: 0 12px 35px rgba(59, 130, 246, 0.06), 0 0 20px rgba(59, 130, 246, 0.1);
+    }
+
+    .signup-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--ink);
+      padding: 14px 18px;
+      font-size: 15px;
+      font-family: inherit;
+      min-width: 0;
+    }
+
+    .signup-input::placeholder {
+      color: #64748b;
+    }
+
+    .signup-btn {
+      background: var(--accent-gradient);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .signup-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.5s;
+    }
+
+    .signup-btn:hover {
+      box-shadow: 0 6px 18px rgba(59, 130, 246, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .signup-btn:hover::before {
+      transform: translateX(100%);
+    }
+
+    .signup-btn:active {
+      transform: translateY(1px);
+    }
+
+    .success-msg {
+      display: none;
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: 16px;
+      animation: slideUp 0.4s var(--ease-premium);
+      background: rgba(226, 183, 76, 0.06);
+      border: 1px solid rgba(226, 183, 76, 0.2);
+      border-radius: 12px;
+      padding: 12px 18px;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(226, 183, 76, 0.05);
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Premium Phone Mockup & Logo showcase (Right Pane) */
+    .mockup-wrap {
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+      perspective: 1200px;
+      cursor: pointer;
+    }
+
+    .glow-bg-radial {
+      position: absolute;
+      inset: -15%;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(226, 183, 76, 0.04) 50%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Floating Shield Logo Card next to Phone */
+    .showcase-logo-card {
+      position: absolute;
+      top: -30px;
+      right: -25px;
+      width: 170px;
+      height: 170px;
+      border-radius: 32px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--line-bright);
+      padding: 12px;
+      backdrop-filter: var(--glass-blur);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.1);
+      z-index: 4;
+      transform: rotate(6deg) translateY(0);
+      animation: floatLogo 6s infinite alternate ease-in-out;
+      transition: all 0.3s;
+    }
+
+    .showcase-logo-card:hover {
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(226, 183, 76, 0.2);
+      transform: rotate(4deg) scale(1.05) translateY(-5px);
+    }
+
+    .logo-img-wrapper {
+      width: 100%;
+      height: 100%;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #ffffff;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    @keyframes floatLogo {
+      0% { transform: rotate(6deg) translateY(0); }
+      100% { transform: rotate(9deg) translateY(-16px); }
+    }
+
+    /* Gorgeous iPhone Mockup frame */
+    .device-phone {
+      width: 300px;
+      height: 610px;
+      background: #050811;
+      border: 10px solid #1e293b;
+      border-radius: 44px;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      position: relative;
+      z-index: 3;
+      margin: 0 auto;
+      transform: rotateY(-8deg) rotateX(8deg);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
+    }
+
+    .device-phone::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.3) 100%);
+      pointer-events: none;
+      z-index: 8;
+    }
+
+    /* Screen Top Notch */
+    .device-notch {
+      width: 120px;
+      height: 20px;
+      background: #1e293b;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+      z-index: 10;
+    }
+
+    .screen-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 26px;
+      font-size: 11px;
+      background: #04060c;
+      user-select: none;
+    }
+
+    .screen-header {
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .screen-header img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: white;
+      object-fit: cover;
+    }
+
+    .screen-header span {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 10px;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* App Stories */
+    .screen-stories {
+      display: flex;
+      gap: 10px;
+      padding: 12px 14px;
+      overflow-x: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .screen-story-bubble {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+      padding: 1.5px;
+      flex-shrink: 0;
+    }
+
+    .screen-story-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #0d1222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    /* App Post Card (Feed) */
+    .screen-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 16px;
+      margin: 14px;
+      padding: 12px;
+      text-align: left;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .screen-card-author {
+      font-weight: 700;
+      font-size: 10.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #f3f4f6;
+    }
+
+    .screen-card-avatar {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: white;
+    }
+
+    .screen-card-content {
+      color: #cbd5e1;
+      font-size: 9.5px;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .screen-card-media {
+      width: 100%;
+      height: 115px;
+      background: linear-gradient(135deg, #090e1a 0%, #1e293b 100%);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border: 1px solid rgba(255,255,255,0.02);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .screen-card-media-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border: 1.5px solid var(--gold);
+    }
+
+    .screen-card-media span {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--gold);
+    }
+
+    /* Interactive Post Like/Stats */
+    .screen-card-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255,255,255,0.03);
+      color: #64748b;
+      font-size: 9px;
+    }
+
+    .mock-like-btn {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      color: #94a3b8;
+      transition: all 0.2s;
+    }
+
+    .mock-like-btn.liked {
+      color: var(--rose);
+      font-weight: 700;
+    }
+
+    .mock-like-btn svg {
+      width: 11px;
+      height: 11px;
+      fill: currentColor;
+      transition: transform 0.25s;
+    }
+
+    .mock-like-btn.liked svg {
+      transform: scale(1.3);
+    }
+
+    /* Mock Gemini Counseling widget on phone */
+    .screen-gemini-preview {
+      background: rgba(59, 130, 246, 0.03);
+      border: 1px dashed rgba(59, 130, 246, 0.2);
+      border-radius: 12px;
+      margin: 0 14px 14px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .gemini-preview-title {
+      font-size: 8.5px;
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .gemini-preview-bubble {
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      padding: 6px 8px;
+      font-size: 8.5px;
+      color: #cbd5e1;
+      line-height: 1.35;
+    }
+
+    /* App Bottom Navigation Dock */
+    .screen-bottom-dock {
+      margin-top: auto;
+      height: 52px;
+      background: rgba(4, 6, 12, 0.96);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 12px;
+      z-index: 5;
+    }
+
+    .screen-dock-icon {
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      cursor: pointer;
+    }
+
+    .screen-dock-icon.active {
+      color: var(--accent);
+    }
+
+    .screen-dock-create {
+      width: 26px;
+      height: 26px;
+      background: var(--accent-gradient);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 14px;
+      margin-top: -8px;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+    }
+
+    /* Five Core Pillars Section */
+    .grid-section {
+      grid-column: 1 / -1;
+      width: 100%;
+      margin-top: 50px;
+      border-top: 1px solid var(--line);
+      padding-top: 80px;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(26px, 3.8vw, 36px);
+      font-weight: 900;
+      margin-bottom: 12px;
+      text-align: center;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 14.5px;
+      color: #94a3b8;
+      text-align: center;
+      margin-bottom: 54px;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    /* Modular Interactive Tab Showcase */
+    .interactive-showcase {
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 40px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 36px;
+      backdrop-filter: var(--glass-blur);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.02);
+      max-width: 1060px;
+      margin: 0 auto 60px;
+      position: relative;
+    }
+
+    .showcase-tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-right: 1px solid var(--line);
+      padding-right: 24px;
+    }
+
+    .showcase-tab {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      padding: 16px 20px;
+      border-radius: 16px;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: left;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      outline: none;
+    }
+
+    .showcase-tab:hover {
+      color: #ffffff;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .showcase-tab.active {
+      background: rgba(59, 130, 246, 0.07);
+      color: var(--accent);
+      box-shadow: inset 0 0 12px rgba(59, 130, 246, 0.05);
+      border-left: 4px solid var(--accent);
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    .showcase-tab-icon {
+      font-size: 20px;
+      transition: transform 0.2s;
+    }
+
+    .showcase-tab:hover .showcase-tab-icon {
+      transform: scale(1.15);
+    }
+
+    .showcase-pane {
+      display: none;
+      animation: tabFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      text-align: left;
+    }
+
+    .showcase-pane.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @keyframes tabFadeIn {
+      from { opacity: 0; transform: translateX(14px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .pane-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pane-desc {
+      font-size: 15px;
+      color: #94a3b8;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .pane-bullets {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .pane-bullet {
+      font-size: 14px;
+      font-weight: 600;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.01);
+      border: 1px solid rgba(255,255,255,0.02);
+      padding: 10px 14px;
+      border-radius: 12px;
+      transition: all 0.2s;
+    }
+
+    .pane-bullet:hover {
+      background: rgba(255,255,255,0.03);
+      border-color: rgba(255,255,255,0.05);
+      transform: translateX(2px);
+    }
+
+    .pane-bullet::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      grid-column: 1 / -1;
+      width: 100%;
+      border-top: 1px solid var(--line);
+      padding-top: 80px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 40px;
+    }
+
+    .faq-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .faq-card:hover {
+      border-color: var(--line-bright);
+      background: var(--panel-hover);
+    }
+
+    .faq-trigger {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 22px 28px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+    }
+
+    .faq-icon-arrow {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      font-size: 13px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s;
+      padding: 0 28px;
+      font-size: 14.5px;
+      color: #94a3b8;
+      line-height: 1.68;
+    }
+
+    .faq-card.open {
+      border-color: rgba(59, 130, 246, 0.15);
+      background: rgba(59, 130, 246, 0.02);
+    }
+
+    .faq-card.open .faq-content {
+      max-height: 250px;
+      padding: 0 28px 24px;
+      border-top: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .faq-card.open .faq-icon-arrow {
+      transform: rotate(180deg);
+      color: var(--accent);
+      background: rgba(59, 130, 246, 0.08);
+      border-color: rgba(59, 130, 246, 0.2);
+    }
+
+    /* Footer */
+    footer {
+      padding: 50px 20px;
+      border-top: 1px solid var(--line);
+      position: relative;
+      z-index: 10;
+      background: rgba(4, 6, 12, 0.95);
+      backdrop-filter: var(--glass-blur);
+    }
+
+    .footer-inner {
+      max-width: 1340px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .social-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.25s, transform 0.2s;
+      font-family: 'Outfit', sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .social-link:hover {
+      color: var(--gold);
+      transform: translateY(-1px);
+    }
+
+    /* Responsive Adaptations */
+    @media (max-width: 990px) {
+      main {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+        padding-top: 20px;
+      }
+      .left-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .desc, .motto-bottom {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .form-container {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .mockup-wrap {
+        max-width: 340px;
+        order: -1;
+      }
+      .device-phone {
+        transform: rotateY(0deg) rotateX(0deg);
+      }
+      .showcase-logo-card {
+        width: 140px;
+        height: 140px;
+        top: -20px;
+        right: -15px;
+      }
+      .interactive-showcase {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+      .showcase-tabs {
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        padding-right: 0;
+        padding-bottom: 20px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .showcase-tabs::-webkit-scrollbar {
+        display: none;
+      }
+      .showcase-tab {
+        flex-shrink: 0;
+        padding: 12px 16px;
+      }
+      .showcase-tab.active {
+        border-left: none;
+        border-bottom: 3px solid var(--accent);
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 0;
+      }
+      .pane-bullets {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 20px 24px;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .signup-form {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        padding: 0;
+        gap: 14px;
+      }
+      .signup-input {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        text-align: center;
+        padding: 18px;
+      }
+      .signup-btn {
+        width: 100%;
+        border-radius: 16px;
+        padding: 18px;
+      }
+      .status-capsule {
+        padding: 10px 16px;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Animated background stars/light particles -->
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="grid-overlay"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <header>
+    <a href="#" class="brand">
+      <div class="brand-logo-container">
+        <img class="brand-logo-img" src="assets/community-logo.png" alt="Bawari Samaj Connect Crest" onerror="this.src='/assets/community-logo.png'">
+      </div>
+      <div class="brand-text">
+        <h1 id="brand-title">Bawari Samaj Connect</h1>
+        <span id="brand-subtitle">Community Platform</span>
+      </div>
+    </a>
+    
+    <div class="switch-container">
+      <div class="switch-bg-pill"></div>
+      <button class="switch-btn active" id="btn-en" onclick="changeLang('en')">English</button>
+      <button class="switch-btn" id="btn-hi" onclick="changeLang('hi')">हिन्दी</button>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- Left Hero Area -->
+    <div class="left-hero">
+      <!-- Motto Top (Top of Samaj Crest Logo) -->
+      <div class="motto-top" id="motto-top">One Community • One Thought • One Future</div>
+      
+      <h2 class="title-main" id="title-main">
+        Connecting Our Community<br>
+        <span class="title-gradient" id="title-gradient">Like Never Before</span>
+      </h2>
+      
+      <p class="desc" id="desc-text">
+        We are building the ultimate digital home for our community. 
+        A modern, secure, and beautiful space designed for connects, careers, sports, and mutual help.
+      </p>
+
+      <!-- Motto Bottom (Bottom of Samaj Crest Logo) -->
+      <div class="motto-bottom" id="motto-bottom">"We are together, we are capable, we will grow."</div>
+
+      <!-- Pulse Coming Soon Badge -->
+      <div class="status-capsule">
+        <div class="status-dot"></div>
+        <div class="status-text" id="status-text">Coming Soon · Currently in Beta Testing</div>
+      </div>
+
+      <!-- Signup newsletter container -->
+      <div class="form-container">
+        <form class="signup-form" onsubmit="handleSignup(event)">
+          <input type="email" class="signup-input" placeholder="Enter your email to get notified" required id="signup-placeholder">
+          <button type="submit" class="signup-btn" id="signup-btn-text">Notify Me</button>
+        </form>
+        <div class="success-msg" id="success-message">🎉 Thank you! We will notify you when the platform goes live.</div>
+      </div>
+    </div>
+
+    <!-- Right Showcase Area: Tilting 3D Phone and Floating Crest Shield -->
+    <div class="right-showcase">
+      <div class="glow-bg-radial"></div>
+      
+      <div class="mockup-wrap">
+        <!-- Floating Glass Crest Card behind phone -->
+        <div class="showcase-logo-card">
+          <div class="logo-img-wrapper">
+            <img class="logo-img" src="assets/community-logo.png" alt="Bawari Samaj Connect Logo" onerror="this.src='/assets/community-logo.png'">
+          </div>
+        </div>
+
+        <!-- High-fidelity iPhone Mockup -->
+        <div class="device-phone">
+          <div class="device-notch"></div>
+          
+          <div class="screen-content">
+            <!-- Simulated App Top Header -->
+            <div class="screen-header">
+              <img src="assets/community-logo.png" alt="Crest Mini" onerror="this.src='/assets/community-logo.png'">
+              <span>Bawari Connect</span>
+              <div style="margin-left: auto; width: 14px; height: 14px; border-radius: 50%; background: rgba(255,255,255,0.08)"></div>
+            </div>
+
+            <!-- Simulated Stories Carousel (Representing Samaj Pillars) -->
+            <div class="screen-stories">
+              <div class="screen-story-bubble" title="एकता"><div class="screen-story-inner">🤝</div></div>
+              <div class="screen-story-bubble" title="शिक्षा"><div class="screen-story-inner">📚</div></div>
+              <div class="screen-story-bubble" title="संस्कृति"><div class="screen-story-inner">🔱</div></div>
+              <div class="screen-story-bubble" title="सेवा"><div class="screen-story-inner">❤️</div></div>
+              <div class="screen-story-bubble" title="प्रगति"><div class="screen-story-inner">📈</div></div>
+            </div>
+
+            <!-- Simulated Live Post Card -->
+            <div class="screen-card">
+              <div class="screen-card-author">
+                <img class="screen-card-avatar" src="assets/community-logo.png" alt="" onerror="this.src='/assets/community-logo.png'">
+                <span id="mock-card-author">Bawari Samaj Connect</span>
+              </div>
+              <div class="screen-card-content" id="mock-card-text">Exciting news! The official community connects platform is currently in private beta testing.</div>
+              
+              <div class="screen-card-media">
+                <img class="screen-card-media-logo" src="assets/community-logo.png" alt="Crest Mock" onerror="this.src='/assets/community-logo.png'">
+                <span id="mock-card-banner">BAWARI SAMAJ CONNECT</span>
+              </div>
+
+              <!-- Interactive Like widget in Phone preview -->
+              <div class="screen-card-actions">
+                <div class="mock-like-btn" onclick="toggleMockLike(this)">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  <span id="like-counter">142</span> Likes
+                </div>
+                <div>24 Comments</div>
+              </div>
+            </div>
+
+            <!-- Simulated Gemini AI counseling card -->
+            <div class="screen-gemini-preview">
+              <div class="gemini-preview-title">
+                <span>✨ Gemini AI Mentor</span>
+              </div>
+              <div class="gemini-preview-bubble" id="mock-chat-bubble">
+                "Hello! Ask me about career choices or Rajasthan government schemes in Hindi or English."
+              </div>
+            </div>
+
+            <!-- Simulated Navigation Bar -->
+            <div class="screen-bottom-dock">
+              <div class="screen-dock-icon active">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              </div>
+              <div class="screen-dock-icon">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              </div>
+              <div class="screen-dock-create">＋</div>
+              <div class="screen-dock-icon">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              </div>
+              <div class="screen-dock-icon">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 4.36 6 6.92 6 10v5l-2 2v1h16v-1l-2-2z"/></svg>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Five Pillars Section -->
+    <div class="grid-section">
+      <h3 class="section-title" id="features-title">The Five Pillars of Bawari Connect</h3>
+      <div class="section-subtitle" id="features-subtitle">Explore the core principles and values embedded in our Samaj crest</div>
+      
+      <!-- Interactive Tab Showcase -->
+      <div class="interactive-showcase">
+        <!-- Sidebar tabs -->
+        <div class="showcase-tabs">
+          <button class="showcase-tab active" onclick="switchTab(0, this)">
+            <span class="showcase-tab-icon">🤝</span> <span id="tab-t1">Unity (एकता)</span>
+          </button>
+          <button class="showcase-tab" onclick="switchTab(1, this)">
+            <span class="showcase-tab-icon">🔱</span> <span id="tab-t2">Culture (संस्कृति)</span>
+          </button>
+          <button class="showcase-tab" onclick="switchTab(2, this)">
+            <span class="showcase-tab-icon">📚</span> <span id="tab-t3">Education (शिक्षा)</span>
+          </button>
+          <button class="showcase-tab" onclick="switchTab(3, this)">
+            <span class="showcase-tab-icon">❤️</span> <span id="tab-t4">Service (सेवा)</span>
+          </button>
+          <button class="showcase-tab" onclick="switchTab(4, this)">
+            <span class="showcase-tab-icon">📈</span> <span id="tab-t5">Progress (प्रगति)</span>
+          </button>
+        </div>
+
+        <!-- Display panes -->
+        <div class="showcase-panes">
+          
+          <!-- Pane 1: Unity -->
+          <div class="showcase-pane active" id="pane-0">
+            <h4 class="pane-title" style="color: var(--accent);">🤝 Unity (एकता)</h4>
+            <p class="pane-desc" id="pane-d1">Connecting Samaj members across all states, districts, cities, and villages under a single unified digital registry directory. Creating strong connection hooks.</p>
+            <div class="pane-bullets">
+              <div class="pane-bullet" id="pane-b1-1">Bilingual Search Filters</div>
+              <div class="pane-bullet" id="pane-b1-2">Regional Onboarding Registers</div>
+              <div class="pane-bullet" id="pane-b1-3">Interactive Family Maps</div>
+              <div class="pane-bullet" id="pane-b1-4">Secure Profile Verification</div>
+            </div>
+          </div>
+
+          <!-- Pane 2: Culture -->
+          <div class="showcase-pane" id="pane-1">
+            <h4 class="pane-title" style="color: var(--purple);">🔱 Culture (संस्कृति)</h4>
+            <p class="pane-desc" id="pane-d2">Preserving, archiving, and celebrating Bawari heritage, gotra roots, family history, local village folklore, and regional updates.</p>
+            <div class="pane-bullets">
+              <div class="pane-bullet" id="pane-b2-1">Community Knowledge Archives</div>
+              <div class="pane-bullet" id="pane-b2-2">Gotra & Family Tree Records</div>
+              <div class="pane-bullet" id="pane-b2-3">Regional Festivals Feed</div>
+              <div class="pane-bullet" id="pane-b2-4">Samaj personal stories board</div>
+            </div>
+          </div>
+
+          <!-- Pane 3: Education -->
+          <div class="showcase-pane" id="pane-2">
+            <h4 class="pane-title" style="color: var(--blue);">📚 Education (शिक्षा)</h4>
+            <p class="pane-desc" id="pane-d3">Empowering youths with mock exam center preparation tools, Gemini AI Career Counseling, and real-time state job vacancy aggregators.</p>
+            <div class="pane-bullets">
+              <div class="pane-bullet" id="pane-b3-1">Gemini AI Career Mentor</div>
+              <div class="pane-bullet" id="pane-b3-2">GK & Reasoning Mock Quizzes</div>
+              <div class="pane-bullet" id="pane-b3-3">Countdown Mock Tests</div>
+              <div class="pane-bullet" id="pane-b3-4">Government Vacancy Feed</div>
+            </div>
+          </div>
+
+          <!-- Pane 4: Service -->
+          <div class="showcase-pane" id="pane-3">
+            <h4 class="pane-title" style="color: var(--rose);">❤️ Service (सेवा)</h4>
+            <p class="pane-desc" id="pane-d4">Fostering a strong mutual-aid ecosystem. Bridging blood donations, medical emergencies, education scholarships, and job referrals.</p>
+            <div class="pane-bullets">
+              <div class="pane-bullet" id="pane-b4-1">Emergency Blood Alerts</div>
+              <div class="pane-bullet" id="pane-b4-2">Education Financial Help</div>
+              <div class="pane-bullet" id="pane-b4-3">Medical Assistance Board</div>
+              <div class="pane-bullet" id="pane-b4-4">Verified Referral Networking</div>
+            </div>
+          </div>
+
+          <!-- Pane 5: Progress -->
+          <div class="showcase-pane" id="pane-4">
+            <h4 class="pane-title" style="color: var(--gold);">📈 Progress (प्रगति)</h4>
+            <p class="pane-desc" id="pane-d5">Promoting regional economic growth via local business listings, classifieds, and managing local sports cricket scoring leagues.</p>
+            <div class="pane-bullets">
+              <div class="pane-bullet" id="pane-b5-1">Community Buy/Sell Marketplace</div>
+              <div class="pane-bullet" id="pane-b5-2">Live Cricket Score Overlay</div>
+              <div class="pane-bullet" id="pane-b5-3">Tournament fixtures engine</div>
+              <div class="pane-bullet" id="pane-b5-4">Demographics & Analytics charts</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion FAQ section -->
+    <div class="faq-section">
+      <h3 class="section-title" id="faq-title">Frequently Asked Questions</h3>
+      <div class="faq-grid">
+        
+        <div class="faq-card">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span id="faq-q1">What is Bawari Samaj Connect?</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-content">
+            <p id="faq-a1">Bawari Samaj Connect is the official digital hub for our community. It connects community members globally, facilitates career development, supports sports events, provides help networks, and preserves traditional culture.</p>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span id="faq-q2">Is my data secure on the platform?</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-content">
+            <p id="faq-a2">Absolutely. Data security is our absolute priority. The platform utilizes advanced encryption to verify users and protect profile directories, Gotras, and contact details from public web scrapers.</p>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span id="faq-q3">How do the AI Career Counseling and Exam Portal work?</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-content">
+            <p id="faq-a3">The platform integrates Google's Gemini AI to offer custom career counseling chat in both Hindi and English. It also generates mock quiz questions and aggregates real-time government job openings in Rajasthan.</p>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span id="faq-q4">How can I contribute to the platform?</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-content">
+            <p id="faq-a4">You can participate by entering your email to receive live updates, joining the official WhatsApp/Facebook portals, and helping onboard family members once the directory goes live in the next beta phase!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div id="footer-copy">&copy; 2026 Bawari Samaj Connect. All rights reserved.</div>
+      <div class="social-links">
+        <a href="#" class="social-link">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.503-5.733-1.455L0 24zm6.29-4.218c1.651.979 3.256 1.486 4.903 1.487 5.432.003 9.85-4.411 9.853-9.842.002-2.631-1.025-5.105-2.89-6.974-1.866-1.869-4.346-2.9-6.983-2.902-5.437 0-9.855 4.412-9.858 9.845-.001 1.761.47 3.427 1.362 4.965l-.999 3.648 3.766-.987zm11.367-7.857c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.174.2-.298.3-.496.099-.198.05-.372-.025-.521-.075-.148-.67-1.611-.918-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+          WhatsApp Group
+        </a>
+        <a href="#" class="social-link">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook Page
+        </a>
+        <a href="#" class="social-link">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Lightweight canvas particle system
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    
+    let particles = [];
+    
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height + canvas.height;
+        this.size = Math.random() * 1.6 + 0.4;
+        this.speedY = -(Math.random() * 0.45 + 0.1);
+        this.speedX = Math.random() * 0.3 - 0.15;
+        this.color = Math.random() > 0.5 ? 'rgba(59, 130, 246, 0.25)' : 'rgba(226, 183, 76, 0.18)'; // Royal Blue & Gold
+      }
+      update() {
+        this.y += this.speedY;
+        this.x += this.speedX;
+        if (this.y < -10) {
+          this.y = canvas.height + 10;
+          this.x = Math.random() * canvas.width;
+        }
+      }
+      draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+    
+    for (let i = 0; i < 45; i++) {
+      particles.push(new Particle());
+    }
+    
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // 3D tilt effect for premium phone mockup
+    const mockup = document.querySelector('.device-phone');
+    const wrap = document.querySelector('.mockup-wrap');
+    if (mockup && wrap) {
+      wrap.addEventListener('mousemove', (e) => {
+        const rect = wrap.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        const tiltX = (y / (rect.height / 2)) * -12; // Max 12 deg tilt
+        const tiltY = (x / (rect.width / 2)) * 12;
+        
+        mockup.style.transform = `rotateY(${tiltY}deg) rotateX(${tiltX}deg) scale(1.03)`;
+      });
+      
+      wrap.addEventListener('mouseleave', () => {
+        mockup.style.transform = `rotateY(-8deg) rotateX(8deg) scale(1)`;
+      });
+    }
+
+    // Mock Like button in screen preview
+    let isLiked = false;
+    let mockLikes = 142;
+    function toggleMockLike(btn) {
+      isLiked = !isLiked;
+      btn.classList.toggle('liked', isLiked);
+      mockLikes += isLiked ? 1 : -1;
+      document.getElementById('like-counter').innerText = mockLikes;
+      
+      // Sound feedback for mock like action
+      playSynthNote(isLiked ? 659.25 : 329.63, 0.1, 'sine'); // E5 or E4
+    }
+
+    // Tab switching engine
+    function switchTab(index, button) {
+      document.querySelectorAll('.showcase-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.showcase-pane').forEach(p => p.classList.remove('active'));
+      
+      button.classList.add('active');
+      document.getElementById('pane-' + index).classList.add('active');
+
+      // Soft audio feedback chime on tab switch
+      playSynthNote(440, 0.05, 'triangle'); // Soft click A4
+    }
+
+    // FAQ Accordion toggler with smooth transition
+    function toggleFaq(trigger) {
+      const card = trigger.closest('.faq-card');
+      const isOpen = card.classList.contains('open');
+      
+      document.querySelectorAll('.faq-card').forEach(c => c.classList.remove('open'));
+      
+      if (!isOpen) {
+        card.classList.add('open');
+        playSynthNote(523.25, 0.04, 'sine'); // C5 pop
+      } else {
+        playSynthNote(392.00, 0.04, 'sine'); // G4 pop
+      }
+    }
+
+    // English / Hindi Translations dictionary
+    const T = {
+      en: {
+        brandTitle: "Bawari Samaj Connect",
+        brandSubtitle: "Community Platform",
+        mottoTop: "One Community • One Thought • One Future",
+        mottoBottom: '"We are together, we are capable, we will grow."',
+        titleMain: 'Connecting Our Community<br><span class="title-gradient">Like Never Before</span>',
+        descText: "We are building the ultimate digital home for our community. A modern, secure, and beautiful space designed for connects, careers, sports, and mutual help.",
+        statusText: "Coming Soon · Currently in Beta Testing",
+        placeholder: "Enter your email to get notified",
+        btnText: "Notify Me",
+        success: "🎉 Thank you! We will notify you when the platform goes live.",
+        
+        mockCardAuthor: "Bawari Samaj Connect",
+        mockCardText: "Exciting news! The official community connects platform is currently in private beta testing.",
+        mockCardBanner: "BAWARI SAMAJ CONNECT",
+        mockChatBubble: '"Hello! Ask me about career choices or Rajasthan government schemes in Hindi or English."',
+
+        featuresTitle: "The Five Pillars of Bawari Connect",
+        featuresSubtitle: "Explore the core principles and values embedded in our Samaj crest",
+        tabT1: "Unity (एकता)",
+        tabT2: "Culture (संस्कृति)",
+        tabT3: "Education (शिक्षा)",
+        tabT4: "Service (सेवा)",
+        tabT5: "Progress (प्रगति)",
+        
+        paneD1: "Connecting Samaj members across all states, districts, cities, and villages under a single unified digital registry directory. Creating strong connection hooks.",
+        paneB1_1: "Bilingual Search Filters",
+        paneB1_2: "Regional Onboarding Registers",
+        paneB1_3: "Interactive Family Maps",
+        paneB1_4: "Secure Profile Verification",
+
+        paneD2: "Preserving, archiving, and celebrating Bawari heritage, gotra roots, family history, local village folklore, and regional updates.",
+        paneB2_1: "Community Knowledge Archives",
+        paneB2_2: "Gotra & Family Tree Records",
+        paneB2_3: "Regional Festivals Feed",
+        paneB2_4: "Samaj personal stories board",
+
+        paneD3: "Empowering youths with mock exam center preparation tools, Gemini AI Career Counseling, and real-time state job vacancies.",
+        paneB3_1: "Gemini AI Career Mentor",
+        paneB3_2: "GK & Reasoning Mock Quizzes",
+        paneB3_3: "Countdown Mock Tests",
+        paneB3_4: "Government Vacancy Feed",
+
+        paneD4: "Fostering a strong mutual-aid ecosystem. Bridging blood donations, medical emergencies, education scholarships, and job referrals.",
+        paneB4_1: "Emergency Blood Alerts",
+        paneB4_2: "Education Financial Help",
+        paneB4_3: "Medical Assistance Board",
+        paneB4_4: "Verified Referral Networking",
+
+        paneD5: "Promoting regional economic growth via local business listings, classifieds, and managing local sports cricket scoring leagues.",
+        paneB5_1: "Buy/Sell Marketplace",
+        paneB5_2: "Live Cricket Score Overlay",
+        paneB5_3: "Tournament fixtures engine",
+        paneB5_4: "Demographics & Analytics charts",
+
+        faqTitle: "Frequently Asked Questions",
+        faqQ1: "What is Bawari Samaj Connect?",
+        faqA1: "Bawari Samaj Connect is the official digital hub for our community. It connects community members globally, facilitates career development, supports sports events, provides help networks, and preserves traditional culture.",
+        faqQ2: "Is my data secure on the platform?",
+        faqA2: "Absolutely. Data security is our absolute priority. The platform utilizes advanced encryption to verify users and protect profile directories, Gotras, and contact details from public web scrapers.",
+        faqQ3: "How do the AI Career Counseling and Exam Portal work?",
+        faqA3: "The platform integrates Google's Gemini AI to offer custom career counseling chat in both Hindi and English. It also generates mock quiz questions and aggregates real-time government job openings in Rajasthan.",
+        faqQ4: "How can I contribute to the platform?",
+        faqA4: "You can participate by entering your email to receive live updates, joining the official WhatsApp/Facebook portals, and helping onboard family members once the directory goes live in the next beta phase!",
+        
+        footerCopy: "© 2026 Bawari Samaj Connect. All rights reserved."
+      },
+      hi: {
+        brandTitle: "बावरी समाज कनेक्ट",
+        brandSubtitle: "सामुदायिक मंच",
+        mottoTop: "एक समाज • एक विचार • एक भविष्य",
+        mottoBottom: '"हम साथ हैं, हम समर्थ हैं, हम बढ़ेंगे।"',
+        titleMain: 'अपने समाज को जोड़ें<br><span class="title-gradient">एक नए डिजिटल अंदाज़ में</span>',
+        descText: "हम अपने समाज के लिए एक बेहतरीन डिजिटल होम बना रहे हैं। यह एक आधुनिक, सुरक्षित और सुंदर मंच है जो सामाजिक संपर्क, करियर, खेल और आपसी मदद के लिए डिज़ाइन किया गया है।",
+        statusText: "जल्द आ रहा है · बीटा टेस्टिंग जारी है",
+        placeholder: "सूचना पाने के लिए अपना ईमेल दर्ज करें",
+        btnText: "सूचना प्राप्त करें",
+        success: "🎉 धन्यवाद! मंच के लाइव होने पर हम आपको ईमेल द्वारा सूचित करेंगे।",
+        
+        mockCardAuthor: "बावरी समाज कनेक्ट",
+        mockCardText: "रोमांचक खबर! आधिकारिक कम्युनिटी कनेक्ट प्लेटफॉर्म वर्तमान में प्राइवेट बीटा टेस्टिंग में है।",
+        mockCardBanner: "बावरी समाज कनेक्ट",
+        mockChatBubble: '"नमस्ते! मुझसे हिन्दी या अंग्रेजी में करियर विकल्प या राजस्थान सरकार की योजनाओं के बारे में पूछें।"',
+
+        featuresTitle: "बावरी कनेक्ट के पांच स्तंभ",
+        featuresSubtitle: "हमारे समाज के प्रतीक (लोगो) में निहित मूल सिद्धांतों और मूल्यों का अन्वेषण करें",
+        tabT1: "एकता (Unity)",
+        tabT2: "संस्कृति (Culture)",
+        tabT3: "शिक्षा (Education)",
+        tabT4: "सेवा (Service)",
+        tabT5: "प्रगति (Progress)",
+        
+        paneD1: "एकल, एकीकृत डिजिटल रजिस्ट्री के तहत गांवों, शहरों, जिलों और राज्यों में समाज के सदस्यों को जोड़ना। मजबूत सामाजिक संबंध स्थापित करना।",
+        paneB1_1: "द्विभाषी खोज फ़िल्टर",
+        paneB1_2: "क्षेत्रीय ऑनबोर्डिंग रजिस्टर",
+        paneB1_3: "इंटरैक्टिव पारिवारिक मानचित्र",
+        paneB1_4: "सुरक्षित प्रोफाइल सत्यापन",
+
+        paneD2: "बावरी विरासत, स्थानीय गांव के गोत्रों, पारंपरिक इतिहास, लोक कथाओं और क्षेत्रीय अपडेट को सहेजना, संजोना और मनाना।",
+        paneB2_1: "सामुदायिक ज्ञान पुरालेख",
+        paneB2_2: "गोत्र एवं वंश वृक्ष अभिलेख",
+        paneB2_3: "क्षेत्रीय त्योहारों की फ़ीड",
+        paneB2_4: "समाज के अनुभवों का बोर्ड",
+
+        paneD3: "मॉक परीक्षा क्विज़, परीक्षा टाइमर, करियर काउंसलर मार्गदर्शन और लाइव सरकारी भर्तियों की सूची के साथ समाज को सशक्त बनाना।",
+        paneB3_1: "Gemini AI करियर मेंटर",
+        paneB3_2: "सामान्य ज्ञान और रीजनिंग क्विज़",
+        paneB3_3: "समयबद्ध ऑनलाइन मॉक टेस्ट",
+        paneB3_4: "सरकारी भर्तियों की सूची",
+
+        paneD4: "एक मजबूत सामाजिक सहायता तंत्र का निर्माण। रक्तदान अनुरोधों, आपातकालीन चिकित्सा सहायता, शिक्षा छात्रवृत्ति और रोजगार रेफरल को जोड़ना।",
+        paneB4_1: "आपातकालीन ब्लड अलर्ट",
+        paneB4_2: "शैक्षिक वित्तीय सहायता",
+        paneB4_3: "चिकित्सा सहायता मंच",
+        paneB4_4: "सत्यापित रेफरल नेटवर्किंग",
+
+        paneD5: "स्थानीय व्यापार विज्ञापनों, कृषि वर्गीकृत बाजार, डेमो डिस्ट्रीब्यूशन विश्लेषण और खेल स्कोरिंग लीग के माध्यम से आर्थिक समृद्धि।",
+        paneB5_1: "कृषि और व्यवसाय बाजार",
+        paneB5_2: "लाइव क्रिकेट स्कोर ओवरले",
+        paneB5_3: "खेल फिक्सचर और टूर्नामेंट",
+        paneB5_4: "जनसांख्यिकी विश्लेषण चार्ट",
+
+        faqTitle: "अक्सर पूछे जाने वाले प्रश्न (FAQ)",
+        faqQ1: "बावरी समाज कनेक्ट क्या है?",
+        faqA1: "बावरी समाज कनेक्ट हमारे समाज का आधिकारिक डिजिटल हब है। यह वैश्विक स्तर पर समाज को जोड़ता है, करियर विकास में सहायता करता है, खेल टूर्नामेंट का आयोजन करता है, वित्तीय/आपातकालीन मदद करता है, और पारंपरिक इतिहास को सहेजता है।",
+        faqQ2: "क्या इस मंच पर मेरा डेटा सुरक्षित है?",
+        faqA2: "बिल्कुल। डेटा सुरक्षा हमारी सर्वोच्च प्राथमिकता है। यह मंच अनधिकृत रोबोटिक स्क्रैपर्स से आपके व्यक्तिगत विवरण, गोत्र और संपर्क विवरण की रक्षा के लिए उन्नत एन्क्रिप्शन का उपयोग करता है।",
+        faqQ3: "करियर और परीक्षा पोर्टल कैसे काम करता?",
+        faqA3: "यह पोर्टल Google के अत्याधुनिक Gemini AI को एकीकृत करता है ताकि आपको हिन्दी और अंग्रेजी में सलाह मिल सके। यह समयबद्ध मॉक टेस्ट भी उपलब्ध कराता है और राजस्थान सरकारी भर्तियों को वास्तविक समय में दिखाता है।",
+        faqQ4: "मैं इस मंच पर कैसे योगदान दे सकता हूँ?",
+        faqA4: "आप अपडेट पाने के लिए अपना ईमेल दर्ज कर सकते हैं, हमारे आधिकारिक व्हाट्सएप/फेसबुक मंचों से जुड़ सकते हैं, और आगामी बीटा चरण में अपने परिवार को ऑनबोर्ड करने में मदद कर सकते हैं!",
+
+        footerCopy: "© 2026 बावरी समाज कनेक्ट। सर्वाधिकार सुरक्षित।"
+      }
+    };
+
+    function changeLang(lang) {
+      const isEn = lang === 'en';
+      document.getElementById('btn-en').classList.toggle('active', isEn);
+      document.getElementById('btn-hi').classList.toggle('active', !isEn);
+      
+      // Slide language background pill
+      document.querySelector('.switch-bg-pill').style.transform = isEn ? 'translateX(0)' : 'translateX(100%)';
+      
+      const dict = T[lang];
+      
+      document.getElementById('brand-title').innerText = dict.brandTitle;
+      document.getElementById('brand-subtitle').innerText = dict.brandSubtitle;
+      document.getElementById('motto-top').innerText = dict.mottoTop;
+      document.getElementById('motto-bottom').innerText = dict.mottoBottom;
+      document.getElementById('title-main').innerHTML = dict.titleMain;
+      document.getElementById('desc-text').innerText = dict.descText;
+      document.getElementById('status-text').innerText = dict.statusText;
+      
+      document.getElementById('signup-placeholder').placeholder = dict.placeholder;
+      document.getElementById('signup-btn-text').innerText = dict.btnText;
+      document.getElementById('success-message').innerText = dict.success;
+      
+      // Mock App Translation
+      document.getElementById('mock-card-author').innerText = dict.mockCardAuthor;
+      document.getElementById('mock-card-text').innerText = dict.mockCardText;
+      document.getElementById('mock-card-banner').innerText = dict.mockCardBanner;
+      document.getElementById('mock-chat-bubble').innerText = dict.mockChatBubble;
+
+      document.getElementById('features-title').innerText = dict.featuresTitle;
+      document.getElementById('features-subtitle').innerText = dict.featuresSubtitle;
+      
+      document.getElementById('tab-t1').innerText = dict.tabT1;
+      document.getElementById('tab-t2').innerText = dict.tabT2;
+      document.getElementById('tab-t3').innerText = dict.tabT3;
+      document.getElementById('tab-t4').innerText = dict.tabT4;
+      document.getElementById('tab-t5').innerText = dict.tabT5;
+
+      document.getElementById('pane-d1').innerText = dict.paneD1;
+      document.getElementById('pane-b1-1').innerText = dict.paneB1_1;
+      document.getElementById('pane-b1-2').innerText = dict.paneB1_2;
+      document.getElementById('pane-b1-3').innerText = dict.paneB1_3;
+      document.getElementById('pane-b1-4').innerText = dict.paneB1_4;
+
+      document.getElementById('pane-d2').innerText = dict.paneD2;
+      document.getElementById('pane-b2-1').innerText = dict.paneB2_1;
+      document.getElementById('pane-b2-2').innerText = dict.paneB2_2;
+      document.getElementById('pane-b2-3').innerText = dict.paneB2_3;
+      document.getElementById('pane-b2-4').innerText = dict.paneB2_4;
+
+      document.getElementById('pane-d3').innerText = dict.paneD3;
+      document.getElementById('pane-b3-1').innerText = dict.paneB3_1;
+      document.getElementById('pane-b3-2').innerText = dict.paneB3_2;
+      document.getElementById('pane-b3-3').innerText = dict.paneB3_3;
+      document.getElementById('pane-b3-4').innerText = dict.paneB3_4;
+
+      document.getElementById('pane-d4').innerText = dict.paneD4;
+      document.getElementById('pane-b4-1').innerText = dict.paneB4_1;
+      document.getElementById('pane-b4-2').innerText = dict.paneB4_2;
+      document.getElementById('pane-b4-3').innerText = dict.paneB4_3;
+      document.getElementById('pane-b4-4').innerText = dict.paneB4_4;
+
+      document.getElementById('pane-d5').innerText = dict.paneD5;
+      document.getElementById('pane-b5-1').innerText = dict.paneB5_1;
+      document.getElementById('pane-b5-2').innerText = dict.paneB5_2;
+      document.getElementById('pane-b5-3').innerText = dict.paneB5_3;
+      document.getElementById('pane-b5-4').innerText = dict.paneB5_4;
+
+      document.getElementById('faq-title').innerText = dict.faqTitle;
+      document.getElementById('faq-q1').innerText = dict.faqQ1;
+      document.getElementById('faq-a1').innerText = dict.faqA1;
+      document.getElementById('faq-q2').innerText = dict.faqQ2;
+      document.getElementById('faq-a2').innerText = dict.faqA2;
+      document.getElementById('faq-q3').innerText = dict.faqQ3;
+      document.getElementById('faq-a3').innerText = dict.faqA3;
+      document.getElementById('faq-q4').innerText = dict.faqQ4;
+      document.getElementById('faq-a4').innerText = dict.faqA4;
+      
+      document.getElementById('footer-copy').innerText = dict.footerCopy;
+
+      // Premium switch chime sound
+      playSynthNote(880, 0.04, 'sine'); // High A5
+    }
+
+    // Advanced Synthesizer Sound Player for Premium UI feedback
+    function playSynthNote(freq, duration, type = 'sine') {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.08, audioCtx.currentTime); // Soft volume
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+        
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {
+        console.log("Web Audio API not allowed or supported yet.");
+      }
+    }
+
+    // Handles premium email registration
+    function handleSignup(event) {
+      event.preventDefault();
+      document.getElementById('success-message').style.display = 'block';
+      event.target.reset();
+      
+      // Gorgeous premium audio success chime (Major arpeggio!)
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const playTone = (freq, time, vol) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, time);
+          gain.gain.setValueAtTime(vol, time);
+          gain.gain.exponentialRampToValueAtTime(0.001, time + 0.4);
+          osc.start(time);
+          osc.stop(time + 0.45);
+        };
+        
+        const now = audioCtx.currentTime;
+        playTone(523.25, now, 0.08);        // C5
+        playTone(659.25, now + 0.08, 0.08); // E5
+        playTone(783.99, now + 0.16, 0.08); // G5
+        playTone(1046.50, now + 0.24, 0.1); // C6 arpeggio success peak!
+      } catch (e) {
+        console.log("Audio not supported.");
+      }
+    }
+  </script>
+</body>
+</html>
