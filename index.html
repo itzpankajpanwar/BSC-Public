@@ -30,15 +30,15 @@
 
   <style>
     :root {
-      /* Premium Soothing Slate - Comfort Contrast Design System */
-      --bg: #edf2f7;
-      --bg-darker: #cbd5e1;
-      --panel: rgba(255, 255, 255, 0.92);
-      --panel-hover: rgba(255, 255, 255, 0.98);
-      --line: rgba(15, 23, 42, 0.08);
-      --line-bright: rgba(15, 23, 42, 0.14);
-      --ink: #0f172a;
-      --muted: #334155;
+      /* Premium Soothing Dimmed Dark - Midnight Obsidian Design System */
+      --bg: #0d131f;
+      --bg-darker: #070a10;
+      --panel: rgba(18, 26, 43, 0.72);
+      --panel-hover: rgba(18, 26, 43, 0.92);
+      --line: rgba(255, 255, 255, 0.08);
+      --line-bright: rgba(255, 255, 255, 0.16);
+      --ink: #f8fafc;
+      --muted: #94a3b8;
 
       --accent: #2563eb;
       /* Trustworthy Premium Blue */
@@ -99,7 +99,7 @@
       pointer-events: none;
       z-index: 1;
       opacity: 0.4;
-      mix-blend-mode: multiply;
+      mix-blend-mode: screen;
     }
 
     .orb-1 {
@@ -162,7 +162,7 @@
       position: relative;
       z-index: 10;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(10, 15, 30, 0.96);
+      background: rgba(7, 10, 16, 0.96);
       backdrop-filter: var(--glass-blur);
     }
 
@@ -441,7 +441,7 @@
       border-radius: 16px;
       padding: 5px;
       backdrop-filter: var(--glass-blur);
-      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06), 0 0 0 1px var(--line);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--line);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -609,10 +609,10 @@
     .device-phone {
       width: 300px;
       height: 610px;
-      background: #f8fafc;
-      border: 10px solid #cbd5e1;
+      background: #070a10;
+      border: 10px solid #1e293b;
       border-radius: 44px;
-      box-shadow: 0 40px 80px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(15, 23, 42, 0.04);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.06);
       overflow: hidden;
       position: relative;
       z-index: 3;
@@ -634,7 +634,7 @@
     .device-notch {
       width: 120px;
       height: 20px;
-      background: #cbd5e1;
+      background: #1e293b;
       position: absolute;
       top: 0;
       left: 50%;
@@ -651,13 +651,13 @@
       flex-direction: column;
       padding-top: 26px;
       font-size: 11px;
-      background: #f8fafc;
+      background: #090d16;
       user-select: none;
     }
 
     .screen-header {
       padding: 10px 14px;
-      border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       display: flex;
       align-items: center;
       gap: 8px;
@@ -702,8 +702,8 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background: #ffffff;
-      border: 1px solid rgba(15, 23, 42, 0.05);
+      background: #121827;
+      border: 1px solid rgba(255, 255, 255, 0.06);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -712,13 +712,13 @@
 
     /* App Post Card (Feed) */
     .screen-card {
-      background: #ffffff;
-      border: 1px solid rgba(15, 23, 42, 0.06);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: 16px;
       margin: 14px;
       padding: 12px;
       text-align: left;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     .screen-card-author {
@@ -728,7 +728,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      color: #0f172a;
+      color: #ffffff;
     }
 
     .screen-card-avatar {
@@ -736,12 +736,12 @@
       height: 18px;
       border-radius: 50%;
       object-fit: cover;
-      background: #ffffff;
-      border: 1px solid rgba(15, 23, 42, 0.08);
+      background: #121827;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .screen-card-content {
-      color: #475569;
+      color: #cbd5e1;
       font-size: 9.5px;
       line-height: 1.45;
       margin-bottom: 8px;
@@ -750,7 +750,7 @@
     .screen-card-media {
       width: 100%;
       height: 115px;
-      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      background: linear-gradient(135deg, #090e1a 0%, #1e293b 100%);
       border-radius: 10px;
       display: flex;
       flex-direction: column;
@@ -840,8 +840,8 @@
     }
 
     .gemini-preview-bubble {
-      background: #ffffff;
-      border: 1px solid rgba(15, 23, 42, 0.05);
+      background: #121827;
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 8px;
       padding: 6px 8px;
       font-size: 8.5px;
@@ -853,8 +853,8 @@
     .screen-bottom-dock {
       margin-top: auto;
       height: 52px;
-      background: #ffffff;
-      border-top: 1px solid rgba(15, 23, 42, 0.06);
+      background: rgba(7, 10, 16, 0.96);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -1042,7 +1042,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      background: rgba(15, 23, 42, 0.01);
+      background: rgba(255, 255, 255, 0.02);
       border: 1px solid var(--line);
       padding: 10px 14px;
       border-radius: 12px;
@@ -1050,7 +1050,7 @@
     }
 
     .pane-bullet:hover {
-      background: rgba(15, 23, 42, 0.03);
+      background: rgba(255, 255, 255, 0.04);
       border-color: var(--line-bright);
       transform: translateX(2px);
     }
@@ -1157,7 +1157,7 @@
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       position: relative;
       z-index: 10;
-      background: rgba(10, 15, 30, 0.96);
+      background: rgba(7, 10, 16, 0.96);
       backdrop-filter: var(--glass-blur);
     }
 
@@ -1411,7 +1411,7 @@
     }
 
     .activity-item:hover {
-      background: rgba(15, 23, 42, 0.02);
+      background: rgba(255, 255, 255, 0.03);
       border-color: var(--line);
       transform: translateX(4px);
     }
